@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- TODO: minimisate files, world styles -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="../terraria/world-static.js" defer></script>
+	<script type="text/javascript" src="../terraria/world.js" defer></script>
+	<script type="text/javascript" src="../terraria/world-writer.js" defer></script>
+	<script type="text/javascript" src="../terraria/BinaryWriter.js" defer></script>
+	<script type="text/javascript" src="Random.js" defer></script>
+	<script type="text/javascript" src="script.js" defer></script>
+	<script type="text/javascript" src="Loot.js" defer></script>
+</head>
+<body>
+	<div class="body">
+		<div class="bg"></div>
+		<div id="header">
+			<div class="pad"></div>
+			<a href="https://www.youtube.com/channel/UC1WDVmqsb2gQZH08G86cP8g">Youtube</a>
+			<div class="pad"></div>
+			<div text="askme"></div><a href="https://discordapp.com/users/962346067909836821">Discord</a>
+			<div class="pad"></div>
+			<div text="donate"></div><a href="https://boosty.to/agzam4/donate">Boosty</a>
+			<div class="pad"></div>
+		</div>
+		<div class="center" id="world-select">
+			<div class="box">
+				<br>
+				<div class="input-box">
+					<label text="name"><div class="icon name"></div></label><input id='name' type="text" name="" placeholder="" value=""><br>
+					<label text="seed"><div class="icon seed"></div></label><input id='seed' type="text" name="" placeholder="" value=""><br>
+				</div>
+				<div class="buttons-group n3">
+					<a style="color: #00FFFF;" class="config-size deepblue" onclick="config(this, 'small')"  text="small" selected='1'><div class="icon size-s"></div></a>
+					<a style="color: #19E698;" class="config-size deepblue" onclick="config(this, 'medium')" text="medium"><div class="icon size-m"></div></a>
+					<a style="color: #32CD32;" class="config-size deepblue" onclick="config(this, 'large')"  text="large"><div class="icon size-l"></div></a>
+				</div>
+				<div class="buttons-group n4">
+					<a style="color: #FF78BB;" class="config-size deepblue" onclick="config(this, 'jounery')" text="jounery"><div class="icon mode-0"></div></a>
+					<a style="color: #FFFFFF;" class="config-size deepblue" onclick="config(this, 'classic')" text="classic"><div class="icon mode-1"></div></a>
+					<a style="color: #FF9900;" class="config-size deepblue" onclick="config(this, 'expert')"  text="expert" selected='1'><div class="icon mode-2"></div></a>
+					<a style="color: #FF261A;" class="config-size deepblue" onclick="config(this, 'master')"  text="master"><div class="icon mode-3"></div></a>
+				</div>
+				<div class="buttons-group n3">
+					<a style="color: #FFFFFF;" class="config-size deepblue" onclick="config(this, 'random')" 		text="random"><div class="icon random"></div></a>
+					<a style="color: #9370DB;" class="config-size deepblue" onclick="config(this, 'corruption')" 	text="corruption" selected='1'><div class="icon corruption"></div></a>
+					<a style="color: #CD5C5C;" class="config-size deepblue" onclick="config(this, 'crimsone')"  	text="crimsone"><div class="icon crimsone"></div></a>
+				</div>
+			</div>
+			<a class="config-size blue" onclick="create()" text="create"></a>
+		</div>
+		<div class="center" id="world-generating" style="display: none;">
+			<p style="font-size: 150%;"><label id="mark">Loading</label></p>
+			<div class="progress-body">
+				<div id='progress'></div>
+			</div>
+		</div>
+		<div class="center" style="margin-top: -50vh; height: 100vh;">
+			<div text="generationupdatedon"></div><b>100%</b><br>
+			<div text="spoilerwarn"></div><br>
+		</div>
+		<div class="center">
+			<h1 class="box" text="generation"></h1>
+			<div class="box" style="max-width: 66%;">
+				<br>
+				<div text="aspawn"></div>
+				<div class="img" style="background-image: url(../assets/spawn.png);"></div>
+				<div text="aphyramid"></div>
+				<div class="img" style="background-image: url(../assets/phyramid.png);"></div>
+				<div text="adungeon"></div>
+				<div class="img" style="background-image: url(../assets/dungeon.png);"></div>
+				<div text="ajungletmple"></div>
+				<div class="img" style="background-image: url(../assets/jungletemple.png);"></div>
+				<br>
+			</div>
+		</div>
+	<br><br><br>
+	</div>
+</body>
+</html>
